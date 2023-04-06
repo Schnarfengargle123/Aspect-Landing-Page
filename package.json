@@ -1,0 +1,25 @@
+{
+  "name": "aspect-landing-page",
+  "version": "1.0.0",
+  "description": "Aspect Landing Page assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schnarfengargle123/Aspect-Landing-Page.git"
+  },
+  "author": "Scott Woodcock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schnarfengargle123/Aspect-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/Schnarfengargle123/Aspect-Landing-Page#readme",
+  "dependencies": {
+    "photoswipe": "^5.3.7"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  }
+}
