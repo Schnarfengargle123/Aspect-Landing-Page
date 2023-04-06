@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <link rel="stylesheet" href="../dist/output.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../dist/output.css">
 </head>
+
 <body>
-    <h1 class="bg-indigo-200">Content</h1>
+  <!-- Navigation -->
+  <nav>
+    <div class="z-0 w-screen mt-4 flex flex-row justify-around items-center">
+      <div><img src="./assets/svg/aspect-logo.svg" /></div>
+
+      <ul class="w-1/5 flex flex-row justify-between">
+        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
+            <!-- Added custom class `navigation-link` to toggle `border-bottom` onfocus/onblur -->
+            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">Home</a>
+            <div></div>
+            <!-- <div class="self-center w-8 border-b-4 border-violet-950"></div> -->
+        </li>
+        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
+            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">About</a>
+            <div></div>
+        </li>
+        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
+            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">Views</a>
+            <div></div>
+        </li>
+        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
+            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">Gallery</a>
+            <div></div>
+        </li>
+      </ul>
+
+      <h2 class="text-violet-950 font-extrabold">The<br />Strategic<br />Communication<br />Experts</h2>
+    </div>
+  </nav>
+  <!-- End Navigation -->
+
+  <script src="./scripts/index.js"></script>
 </body>
+
 </html>
