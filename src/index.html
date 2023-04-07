@@ -7,38 +7,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="./styles/output.css">
+=======
+  <link rel="stylesheet" href="./styles/output.css">
+>>>>>>> 3ea86d30cafb3fc721b4644a9ac5121d6d5e1de9
 </head>
 
 <body>
   <!-- Navigation -->
-  <nav>
-    <div class="z-0 w-screen mt-4 flex flex-row justify-around items-center">
-      <div><img src="./assets/svg/aspect-logo.svg" /></div>
+  <nav id="navigation">
+    <div class="z-0 w-screen mt-4 flex flex-row justify-between items-center flex-wrap sm:flex-none sm:mt-0">
+      <div class="ml-4 sm:ml-16 mb-2"><img src="./assets/svg/aspect-logo.svg" /></div>
 
-      <ul class="w-1/5 flex flex-row justify-between">
-        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
-            <!-- Added custom class `navigation-link` to toggle `border-bottom` onfocus/onblur -->
-            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">Home</a>
-            <div></div>
-            <!-- <div class="self-center w-8 border-b-4 border-violet-950"></div> -->
+      <button class="w-8 mr-4 mb-4 flex flex-col justify-between h-6 visible sm:hidden" id="hamburger-open">
+        <div class="border-t-4 border-violet-950"></div>
+        <div class="border-t-4 border-violet-950"></div>
+        <div class="border-t-4 border-violet-950"></div>
+      </button>
+
+      <ul class="w-3/12 flex-row justify-between hidden sm:flex">
+        <li class="flex flex-col justify-center items-center">
+          <!-- Added custom class `navigation-link` to toggle `border-bottom` onfocus/onblur -->
+          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">Home</a>
+          <div></div> <!-- The actual border rendered, *could be rendered to DOM conditionally via JavaScript*. -->
         </li>
-        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
-            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">About</a>
-            <div></div>
+        <li class="flex flex-col justify-center items-center">
+          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">About</a>
+          <div></div>
         </li>
-        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
-            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">Views</a>
-            <div></div>
+        <li class="flex flex-col justify-center items-center">
+          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">Views</a>
+          <div></div>
         </li>
-        <li class="bg-red-400 w-4/12 flex flex-col justify-center items-center">
-            <a class="bg-green-400 w-4/5  text-violet-950 font-semibold text-lg text-center navigation-link" href="#">Gallery</a>
-            <div></div>
+        <li class="flex flex-col justify-center items-center">
+          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">Gallery</a>
+          <div></div>
         </li>
       </ul>
 
-      <h2 class="text-violet-950 font-extrabold">The<br />Strategic<br />Communication<br />Experts</h2>
+      <div class="w-screen text-xl text-center mt-2 py-4 sm:w-0 sm:mr-36 sm:py-0 flex flex-col items-center bg-indigo-400">
+        <h2 class="text-violet-950 font-extrabold sm:text-left">The<br />Strategic<br />Communication<br />Experts</h2>
+      </div>
     </div>
+
+    <!-- Hamburger Menu -->
+    <div class="h-screen flex-col justify-between pt-4 items-center bg-violet-950 z-40 absolute inset-0 hidden" id="hamburger-menu">
+      <div class="w-screen text-white flex flex-row justify-between items-center">
+        <img src="./assets/svg/aspect-logo-alt.svg" class="mb-6 ml-4" />
+        <button id="hamburger-close" class="font-bold text-4xl self-start mr-5 mt-2.5">X</button>
+      </div>
+      <ul class="w-4/5 flex flex-col justify-around items-center h-4/5 text-3xl">
+        <li class="w-4/12 flex flex-col justify-center items-center">
+          <!-- Added custom class `navigation-link` to toggle `border-bottom` onfocus/onblur -->
+          <a class="w-4/5 text-gray-300 font-semibold text-center navigation-link mb-1" href="#">Home</a>
+          <div></div>
+        </li>
+        <li class="w-4/12 flex flex-col justify-center items-center">
+          <a class="w-4/5 text-gray-300 font-semibold text-center navigation-link mb-1" href="#">About</a>
+          <div></div>
+        </li>
+        <li class="w-4/12 flex flex-col justify-center items-center">
+          <a class="w-4/5 text-gray-300 font-semibold text-center navigation-link mb-1" href="#">Views</a>
+          <div></div>
+        </li>
+        <li class="w-4/12 flex flex-col justify-center items-center">
+          <a class="w-4/5 text-gray-300 font-semibold text-center navigation-link mb-1" href="#">Gallery</a>
+          <div></div>
+        </li>
+      </ul>
+    </div>
+    <!-- End Hamburger Menu -->
+
   </nav>
   <!-- End Navigation -->
 
