@@ -1,0 +1,46 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "npm install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "test": {
+      "name": "test",
+      "command": "npm run test",
+      "runAtStart": false
+    },
+    "npm i live-server": {
+      "name": "npm i live-server",
+      "command": "npm i live-server"
+    },
+    "npm audit": {
+      "name": "npm audit",
+      "command": "npm audit"
+    },
+    "npm start": {
+      "name": "npm start",
+      "command": "npm start"
+    },
+    "node index.js": {
+      "name": "node index.js",
+      "command": "node index.js"
+    },
+    "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch": {
+      "name": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+      "command": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    },
+    "npx tailwindcss -i ./src/styles/main.css -o ./dist/output.css --watch": {
+      "name": "npx tailwindcss -i ./src/styles/main.css -o ./dist/output.css --watch",
+      "command": "npx tailwindcss -i ./src/styles/main.css -o ./dist/output.css --watch"
+    },
+    "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch": {
+      "name": "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch",
+      "command": "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch"
+    }
+  }
+}
