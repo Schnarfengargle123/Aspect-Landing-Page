@@ -14,7 +14,7 @@
   <!-- Navigation -->
   <nav id="navigation">
     <div class="z-0 w-screen mt-4 flex flex-row justify-between items-center flex-wrap sm:flex-none sm:mt-0">
-      <div class="ml-4 sm:ml-16 mb-2"><img src="./assets/svg/aspect-logo.svg" /></div>
+      <div id="navigation-logo" class="ml-4 sm:ml-16 mb-4"><img src="./assets/svg/aspect-logo.svg" /></div>
 
       <button class="w-8 mr-4 mb-4 flex flex-col justify-between h-6 visible sm:hidden" id="hamburger-open">
         <div class="border-t-4 border-violet-950"></div>
@@ -22,27 +22,28 @@
         <div class="border-t-4 border-violet-950"></div>
       </button>
 
-      <ul class="w-3/12 flex-row justify-between hidden sm:flex">
+      <ul id="navigation-links-container" class="ml-6 w-96 flex-row justify-between hidden sm:flex">
+      <!-- <ul class="w-3/12 flex-row justify-between hidden sm:flex"> -->
         <li class="flex flex-col justify-center items-center">
           <!-- Added custom class `navigation-link` to toggle `border-bottom` onfocus/onblur -->
-          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">Home</a>
+          <a class="text-violet-950 font-semibold text-xl text-center navigation-link mb-1 py-1" href="#">Home</a>
           <div></div> <!-- The actual border rendered, *could be rendered to DOM conditionally via JavaScript*. -->
         </li>
         <li class="flex flex-col justify-center items-center">
-          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">About</a>
+          <a class="text-violet-950 font-semibold text-xl text-center navigation-link mb-1 py-1" href="#">About</a>
           <div></div>
         </li>
         <li class="flex flex-col justify-center items-center">
-          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">Views</a>
+          <a class="text-violet-950 font-semibold text-xl text-center navigation-link mb-1 py-1" href="#">Views</a>
           <div></div>
         </li>
         <li class="flex flex-col justify-center items-center">
-          <a class="text-violet-950 font-semibold text-lg text-center navigation-link mb-1 py-1" href="#">Gallery</a>
+          <a class="text-violet-950 font-semibold text-xl text-center navigation-link mb-1 py-1" href="#">Gallery</a>
           <div></div>
         </li>
       </ul>
 
-      <div class="w-screen text-xl text-center mt-2 py-4 sm:w-0 sm:mr-36 sm:py-0 flex flex-col items-center bg-indigo-400">
+      <div id="navigation-caption" class="w-screen text-xl text-center mt-2 py-4 sm:w-0 sm:mr-36 sm:py-0 flex flex-col items-center bg-indigo-400">
         <h2 class="text-violet-950 font-extrabold sm:text-left">The<br />Strategic<br />Communication<br />Experts</h2>
       </div>
     </div>
