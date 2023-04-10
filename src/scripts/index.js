@@ -112,3 +112,61 @@ window.addEventListener('resize', () => {
     headerContent.classList.remove('flex-col');
   }
 });
+
+const API_KEY = '94b7ca400ebd4960b48cd8a7c1774799';
+
+let articles;
+
+const cardContainer = document.querySelector('#card-container');
+
+fetch(
+  `https://newsapi.org/v2/everything?sources=bbc-news&pageSize=3&page=1&apiKey=${API_KEY}`
+)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    articles = data.articles;
+  })
+  .then(() => {
+    console.log('Articles: ', articles);
+
+    for (const article of articles) {
+      const originalArticleDate = new Date(article.publishedAt).toDateString();
+
+      const articleYear = originalArticleDate.slice(11, 15);
+      const articleMonth = originalArticleDate.slice(4, 7);
+      const articleDay = originalArticleDate.slice(8, 10);
+
+      // console.log(originalArticleDate);
+      console.log(articleYear);
+      console.log(articleMonth);
+      console.log(articleDay);
+
+      const articleDate = articleDay + 'th' + ' ' + articleMonth + ' ' + articleYear;
+      console.log(articleDate);
+
+      // const formattedArticleDate =
+      //   articleDate.getDate() +
+      //   'th ' +
+      //   articleDate.getMonth() +
+      //   articleDate.Year();
+      // console.log(formattedArticleDate);
+
+      const articleComponent = `
+<div class="w-[28rem] h-[33rem] px-16 bg-violet-900 flex flex-col justify-between items-start mx-2">
+<div class="h-[24rem] w-[20rem]">
+  <h2 class="bg-orange-600 px-8 py-4 text-gray-100 self-start w-[14rem]">${articleDate}</h2>
+  <h1 class="text-3xl font-bold text-gray-100 mt-8">${article.title}</h1>
+</div>
+<div class="flex flex-row mb-16 w-48 items-center">
+  <img src="./assets//svg/news-circle.svg" class="w-4 h-4" />
+  <h3 class="text-gray-100 font-semibold text-lg ml-2">${article.source.Name}</h3>
+</div>
+</div>
+`;
+
+      cardContainer.innerHTML += articleComponent;
+      console.log(article);
+    }
+  })
+  .catch((err) => console.error(err));
