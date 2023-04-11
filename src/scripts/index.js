@@ -1,3 +1,5 @@
+import PhotoSwipeLightbox from '/photoswipe/dist/photoswipe-lightbox.esm.js';
+
 const navigationLinks = document.getElementsByClassName('navigation-link');
 
 for (const link of navigationLinks) {
@@ -142,7 +144,8 @@ fetch(
       console.log(articleMonth);
       console.log(articleDay);
 
-      const articleDate = articleDay + 'th' + ' ' + articleMonth + ' ' + articleYear;
+      const articleDate =
+        articleDay + 'th' + ' ' + articleMonth + ' ' + articleYear;
       console.log(articleDate);
 
       // const formattedArticleDate =
@@ -170,3 +173,11 @@ fetch(
     }
   })
   .catch((err) => console.error(err));
+
+const lightbox = PhotoSwipeLightbox({
+  gallery: '#gallery',
+  children: 'a',
+  pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
+});
+
+lightbox.init();
