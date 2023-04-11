@@ -1,6 +1,11 @@
 // import PhotoSwipeLightbox from 'photoswipe/lightbox';
 // import 'photoswipe/style.css';
 
+import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
+import PhotoSwipe from 'photoswipe/dist/photoswipe.esm.js';
+
+import 'photoswipe/dist/photoswipe.css';
+
 const navigationLinks = document.getElementsByClassName('navigation-link');
 
 for (const link of navigationLinks) {
@@ -176,11 +181,18 @@ fetch(
   })
   .catch((err) => console.error(err));
   
-  const lightbox = new PhotoSwipeLightbox({
-    // gallery: '#my-gallery',
-    gallery: '#my-gallery',
-    children: 'a',
-    pswpModule: () => import('photoswipe'),
-  });
-  
+  // const lightbox = new PhotoSwipeLightbox({
+  //   // gallery: '#my-gallery',
+  //   gallery: '#my-gallery',
+  //   children: 'a',
+  //   pswpModule: () => import('photoswipe'),
+  // });
+
+  const options = {
+    gallerySelector: '#my-gallery',
+    childSelector: 'a',
+    pswpModule: PhotoSwipe
+  };
+  const lightbox = new PhotoSwipeLightbox(options);
   lightbox.init();
+  

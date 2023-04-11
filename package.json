@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Schnarfengargle123/Aspect-Landing-Page#readme",
   "dependencies": {
-    "live-server": "^1.2.2",
+    "parcel": "^2.8.3",
     "photoswipe": "^5.3.7"
   },
   "devDependencies": {
