@@ -1,4 +1,5 @@
-import PhotoSwipeLightbox from '/photoswipe/dist/photoswipe-lightbox.esm.js';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 
 const navigationLinks = document.getElementsByClassName('navigation-link');
 
@@ -122,7 +123,8 @@ let articles;
 const cardContainer = document.querySelector('#card-container');
 
 fetch(
-  `https://newsapi.org/v2/everything?sources=bbc-news&pageSize=3&page=1&apiKey=${API_KEY}`
+  // `https://newsapi.org/v2/everything?sources=bbc-news&pageSize=3&page=1&apiKey=${API_KEY}`
+  `https://newsapi.org/v2/everything?sources=bbc-news&pageSize=3&page=1&apiKey=94b7ca400ebd4960b48cd8a7c1774799`
 )
   .then((response) => response.json())
   .then((data) => {
@@ -173,11 +175,12 @@ fetch(
     }
   })
   .catch((err) => console.error(err));
-
-const lightbox = PhotoSwipeLightbox({
-  gallery: '#gallery',
-  children: 'a',
-  pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
-});
-
-lightbox.init();
+  
+  const lightbox = new PhotoSwipeLightbox({
+    // gallery: '#my-gallery',
+    gallery: '#my-gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+  });
+  
+  lightbox.init();
