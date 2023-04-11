@@ -1,5 +1,5 @@
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
+// import PhotoSwipeLightbox from 'photoswipe/lightbox';
+// import 'photoswipe/style.css';
 
 const navigationLinks = document.getElementsByClassName('navigation-link');
 
