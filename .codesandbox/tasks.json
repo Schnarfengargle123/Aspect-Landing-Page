@@ -41,6 +41,22 @@
     "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch": {
       "name": "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch",
       "command": "npx tailwindcss -i ./src/styles/main.css -o ./src/styles/output.css --watch"
+    },
+    "npm install": {
+      "name": "npm install",
+      "command": "npm install"
+    },
+    "npx parcel src/index.html": {
+      "name": "npx parcel src/index.html",
+      "command": "npx parcel src/index.html"
+    },
+    "npm watch": {
+      "name": "npm watch",
+      "command": "npm watch"
+    },
+    "npm run watch": {
+      "name": "npm run watch",
+      "command": "npm run watch"
     }
   }
 }
